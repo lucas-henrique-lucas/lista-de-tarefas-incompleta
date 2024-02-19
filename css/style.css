@@ -26,6 +26,12 @@ body {
     gap: 40px;
 }
 
+section {
+    border-radius: 24px;
+    background-color: #edd7d9;
+    padding: 10px;
+}
+
 h2 {
     color: var(--cor-segundaria);
 }
