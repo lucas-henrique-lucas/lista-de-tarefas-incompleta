@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <button id="adicionar" onclick="adicionarTarefa()">ADICIONAR</button>
+        <button id="limpar" onclick="limparCampo()">LIMPAR</button>
+    </header>
+    <main class="main">
+        <section id="pendencia">
+            <h2 id="pendencia-subtitulo">Pendencia</h2>
+            <ol class="lista" id="lista-pendencia"></ol>
+        </section>
+        <section>
+            <h2>Concluido</h2>
+            <ol class="lista" id="lista-concluido"></ol>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
