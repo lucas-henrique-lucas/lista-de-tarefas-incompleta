@@ -8,6 +8,7 @@
     --cor-primaria: #f8edee; /* fundo */
     --cor-segundaria: #943847; /* h2 - card */
     --cor-terciaria: #f8edee; /* texto do card */
+    --cor-quaternaria: #edd7d9; /* section */
 }
 
 body {
@@ -28,7 +29,7 @@ body {
 
 section {
     border-radius: 24px;
-    background-color: #edd7d9;
+    background-color: var(--cor-quaternaria);
     padding: 10px;
 }
 
