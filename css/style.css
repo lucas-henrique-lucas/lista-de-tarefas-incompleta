@@ -48,7 +48,7 @@ h2 {
     overflow-y: auto;
 }
 
-.remover, .concluir {
+.remover, .concluir, .editar {
     background-color: transparent;
     border: none;
     cursor: pointer;
