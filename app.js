@@ -14,6 +14,11 @@ function adicionarTarefa() {
     manipularAtributo(botao_lista_concluir, 'onclick', 'concluirTarefa(this)');
     exibirIconeDoBotao('./img/check.svg', botao_lista_concluir);
 
+    let botao_lista_editar = document.createElement('button');
+    manipularAtributo(botao_lista_editar, 'class', 'editar');
+    manipularAtributo(botao_lista_editar, 'onclick', 'editarTarefa(this)');
+    exibirIconeDoBotao('./img/edit-3.svg', botao_lista_editar);
+
     let texto_lista = document.createElement('p');
     manipularAtributo(texto_lista, 'class', 'lista__item__texto');
 
@@ -21,6 +26,7 @@ function adicionarTarefa() {
 
     document.getElementById('lista-pendencia').appendChild(item_lista).appendChild(botao_lista_remover);
     document.getElementById('lista-pendencia').appendChild(item_lista).appendChild(botao_lista_concluir);
+    document.getElementById('lista-pendencia').appendChild(item_lista).appendChild(botao_lista_editar);
     document.getElementById('lista-pendencia').appendChild(item_lista).appendChild(texto_lista);
 }
 
@@ -62,4 +68,11 @@ function concluirTarefa(este) {
         img.src = './img/check.svg';
         document.getElementById('lista-pendencia').appendChild(elemento);
     }
+}
+
+function editarTarefa(este) {
+    let elemento = este.parentNode;
+    let texto = elemento.children[3].textContent;
+    let novoTexto = prompt('Editar:', texto);
+    return novoTexto == null ? texto : elemento.children[3].textContent = novoTexto;
 }
